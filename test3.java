@@ -1,16 +1,15 @@
-package com.qfedu.iftest;
+package com.qfedu.looptest;
 
 public class test3 {
     public static void main(String[] args) {
-        //定义一个int类型的变量成绩为59，
-        // 如果成绩大于等于60，
-        // 则输出成绩及格，
-        // 否则，输出成绩不及格。
-        int score = 59;
-        if(score>=60){
-            System.out.println("成绩及格!");
-        }else{
-            System.out.println("成绩不及格哦,要加油咯!");
+        //实现求1-100之和
+        //定义和变量sum
+        int sum = 0;
+        //是for循环,循环累加,小于101,i累加
+        for (int i = 1; i < 101; i++) {
+            sum+=i;
         }
+        //输出1-100的和
+        System.out.println("1-100之和为:"+sum);
     }
 }

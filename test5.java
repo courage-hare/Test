@@ -1,29 +1,21 @@
-package com.qfedu.iftest;
+package com.qfedu.looptest;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class test5 {
     public static void main(String[] args) {
-        //从键盘输入三角形的三边长，判断出这三边能否构成三角形
-        //提示语,获取sc,接收a
-        System.out.println("请输入三角形的三条边,判断是否可以组成三角形,\n" +
-                "请输入第一个边长:");
+        //用户输入一个1--10以内的数字，通过运算求出该数字的阶乘
+        //提示,获取sc,接收num,定义变量ride
+        System.out.println("输入1-10以内的数字,可求出该数字的阶乘:");
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        //提示语2,获取sc1,接收b
-        System.out.println("请输入第二个边长:");
-        Scanner sc1 = new Scanner(System.in);
-        int b = sc.nextInt();
-        //提示语3,获取sc2,接收c
-        System.out.println("请输入第三个边长:");
-        Scanner sc2 = new Scanner(System.in);
-        int c = sc2.nextInt();
-
-        //判断,假如if(出现负值),调用Math.abs()绝对值方法即可.
-        if((a+b)>c&&Math.abs(a-b)<c){
-            System.out.println("恭喜您,您输入的三条边,可以构成三角形.");
-        }else{
-            System.out.println("抱歉,您输入的三条边,组不成三角形.");
+        int num = sc.nextInt();
+        int ride = 1;
+        //开始for循环
+        for (int i = 1; i <= num; i++) {
+            ride *= i;
         }
+        System.out.println("您输入的" +
+                num+"阶乘为:"+ride);
     }
 }

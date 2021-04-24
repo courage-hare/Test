@@ -1,22 +1,17 @@
-package com.qfedu.iftest;
-
-import java.util.Scanner;
+package com.qfedu.looptest;
 
 public class test2 {
     public static void main(String[] args) {
-        /*2、随意输入一个数字a，若a>20,输出a的值。
-         */
-        //提示语
-        System.out.println("请随意输入一个整数:");
-        //获取输入数据
-        Scanner sc = new Scanner(System.in);
-        //接收数据
-        int a = sc.nextInt();
-        //进行判断
-        if(a>20){
-            System.out.println("您输入的整数为:"+a);
-        }else{
-            System.out.println("抱歉您输入的小于或等于20,不进行输出,结束了");
+        //实现求1-10这10个数字的和
+        //定义变量i,变量和sum
+        int i = 1;
+        int sum = 0;
+        //表达式
+        while(i<11){
+            //循环体 1+2+3..+10=sum
+            sum+=i;
+            i++;
         }
+        System.out.println("1-10累加和为:"+sum);
     }
 }
